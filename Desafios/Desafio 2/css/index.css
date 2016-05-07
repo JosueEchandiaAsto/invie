@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+}
+html, body{
+  height: 100%;
+  font-size: 30px;
+}
+.content{
+  min-height: 100%;
+  margin-bottom: -150px;
+  color: rgb(252, 61, 49)
+}
+.content:after{
+  content: "";
+  display: block;
+  height: 150px
+}
+.footer{
+  background: rgb(252, 61, 49);
+  width: 100%;
+  color: white;
+  height: 150px
+}
