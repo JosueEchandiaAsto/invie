@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Desafios Platzi</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Quicksand|Montserrat' rel='stylesheet' type='text/css'>
+  <style media="screen">
+    *{
+      margin: 0;
+    }
+    body{
+      font-family: sans-serif;
+    }
+    h1{
+      font-family: 'Montserrat',sans-serif;
+      font-weight: normal;
+      text-align: center;
+      color: white;
+      background: #273b47;
+      padding: .5em 0;
+    }
+    .boton{
+      position: relative;
+      left: 1em;
+      top: -2.7em;
+      padding: .8em;
+      color: #273b47;
+      text-decoration: none;
+      font-weight: bold;
+      background: #F9C80E;
+      border-radius: 4px;
+    }
+    .desafios{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .desafio{
+      width: 550px;
+      margin: 1em;
+      margin-top: 0;
+      position: relative;
+      border-radius: 10px;
+      -webkit-box-shadow: 7px 7px 11px -2px rgba(145,140,145,0.68);
+      -moz-box-shadow: 7px 7px 11px -2px rgba(145,140,145,0.68);
+      box-shadow: 7px 7px 11px -2px rgba(145,140,145,0.68)
+    }
+    .desafio:hover .container{
+      opacity: 1;
+    }
+    .desafio img{
+      width: 100%
+    }
+    .container{
+      transition: .3s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      padding: 1em;
+      background: rgba(249, 249, 249, .9)
+    }
+    .description{
+      font-size: 35px;
+      text-align: center;
+    }
+    .container a{
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 20px;
+      padding: .8em 2em;
+      background: crimson;
+      margin: 0;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Desafios de Platzi</h1>
+    <a href="../index.html" class="boton">Regresar a Invie</a>
+  </header>
+  <section class="desafios">
+    <article class="desafio">
+      <img src="images/desafio1.png" alt="">
+      <div class="container">
+        <div class="description">
+          Desafio 1: Platzi Blog
+        </div>
+        <a href="./Desafio 1/index.html">Ingresar</a>
+      </div>
+    </article>
+    <article class="desafio">
+      <img src="images/desafio2.png" alt="">
+      <div class="container">
+        <div class="description">
+          Desafio 2: Stiky Footer
+        </div>
+        <a href="./Desafio 2/index.html">Ingresar</a>
+      </div>
+    </article>
+    <article class="desafio">
+      <img src="images/desafio3.png" alt="">
+      <div class="container">
+        <div class="description">
+          Desafio 3: Hacer transition Hover
+        </div>
+        <a href="./Desafio 3/index.html">Ingresar</a>
+      </div>
+    </article>
+    <article class="desafio">
+      <img src="images/desafio4.png" alt="">
+      <div class="container">
+        <div class="description">
+          Desafio 1: Centrar vertical y horizontal
+        </div>
+        <a href="./Desafio 4/index.html">Ingresar</a>
+      </div>
+    </article>
+  </section>
+</body>
+</html>
