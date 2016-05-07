@@ -1,0 +1,71 @@
+html, body, h1, figure{
+  margin: 0;
+}
+body{
+  font-family: sans-serif;
+}
+h1{
+  padding: 1em;
+  background: lightgray;
+  text-align: center;
+  color: rgb(125, 2, 191)
+}
+.formas{
+  padding: 1em;
+  text-align: center;
+}
+p{
+  margin-left: 1em;
+  font-size: 40px;
+}
+.forma{
+  margin: auto;
+  background: url("background.jpg");
+  width: 900px;
+  height: 500px;
+  margin-bottom: 1em;
+}
+img{
+  padding: 79px 0;
+}
+.centrar-1 img{
+  margin: 135px 0
+}
+.centrar-2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centrar-3 .content{
+  min-height: 100%;
+  margin-bottom: -50%;
+}
+.centrar-3 img{
+  margin: 10%
+}
+.centrar-4{
+  position: relative;
+}
+.centrar-4 img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -115px 0 0 -115px;
+}
+.centrar-5{
+}
+.centrar-5 .punto{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  margin: -30px 0 0 -30px;
+  border-radius: 50%;
+  background: rgb(247, 19, 60);
+}
+.centrar-5 img{
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
