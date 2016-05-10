@@ -159,8 +159,7 @@ input:focus, textarea:focus{
 }
 .footer .contenedor{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .contacto{
   display: flex;
@@ -247,9 +246,26 @@ input:focus, textarea:focus{
   .portada{
     text-align: center;
   }
+  .col1{
+    margin: 0;
+  }
+  .footer .contenedor{
+    align-items: center;
+  }
   .menu{
     position: static;
     display: block;
+  }
+  .formulario{
+    width: 250px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contacto{
+    height: 200px;
+  }
+  .contacto img, .contacto a{
+    padding-left: 1em;
   }
   .menu li:first-child{
     margin: 0
@@ -265,11 +281,19 @@ input:focus, textarea:focus{
     margin: 0;
     border-bottom: 1px solid white;
   }
+  input[type="text"],input[type="email"]{
+    font-size: 16px;
+    padding: 5px;
+  }
   .menu li:first-child{
     border-top: 1px solid white;
   }
   .menu li:before,.menu li:after{
     display: none
+  }
+  .formulario, .col1, .col2, .col2 textarea{
+    width: 95%;
+    margin: 0;
   }
   .logotipo{
     margin: 0;
@@ -277,11 +301,19 @@ input:focus, textarea:focus{
   .titulo{
     font-size: 30px;
   }
+  .footer .contenedor{
+    flex-wrap: wrap;
+  }
   .title-a{
     font-size: 16px;
   }
   .title-b{
     font-size: 30px;
+  }
+  .genero label, .intereses label{
+    display: block;
+    font-size: 14px;
+    zoom: 1.5;
   }
   .boton{
     margin-bottom: 0em;
@@ -289,4 +321,7 @@ input:focus, textarea:focus{
   .guitarra img{
     width: 250px;
   }
+  .contacto a {
+    width: 35%;
+    padding: 0;
 }
