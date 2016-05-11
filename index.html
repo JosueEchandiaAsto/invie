@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Invie - tus mejores guitarras!!!</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Invie - tus mejores guitarras!!</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/invie.css">
+	<!-- <link rel="stylesheet" media="(max-width: 800px)" href="css/mediaqueries.css"> -->
 </head>
 <body>
 	<section id="portada" class="portada background">	<!-- Portada -->
@@ -12,7 +14,8 @@
 			<figure class="logotipo"> <!-- logotipo -->
 				<img  src="images/invie.png" width="186" height="60" alt="Invie Logotipo"/>
 			</figure>
-			<nav class="menu"> <!-- menu -->
+			<span id="button" class="burguer-button icon-menu"></span>
+			<nav id="menu" class="menu"> <!-- menu -->
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="./Desafios/index.html">Desafios</a></li>
@@ -29,7 +32,7 @@
 	<section id="guitarras" class="guitarras contenedor"> <!--Guitarras-->
 		<h2 class="">Nuestras guitarras</h2><!-- titulo -->
 		<article class="guitarra"><!-- guitarra 1 -->
-			<img class="derecha" src="images/invie-acustica.png" alt="guitarra invie acustica" width="350" height=""/>
+			<img class="derecha" data-src="images/invie-acustica.png" alt="guitarra invie acustica" width="350" height=""/>
 			<div class="contenedor-guitarra-a">
 				<h3 class="title-b">Invie Acústica</h3>
 				<ol>
@@ -39,7 +42,7 @@
 			</div>
 		</article>
 		<article class="guitarra b"><!-- guitarra 2 -->
-			<img class="izquierda" src="images/invie-classic.png" alt="guitarra invie classic" width="350" height=""/>
+			<img class="izquierda" data-src="images/invie-classic.png" alt="guitarra invie classic" width="350" height=""/>
 			<div class="contenedor-guitarra-b">
 				<h3 class="title-b">Invie Clasic</h3>
 				<ol>
@@ -94,5 +97,30 @@
 			</form>
 		</div>
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		var consulta = window.matchMedia('(max-width: 500px)');
+		consulta.addListener(mediaQuery);
+
+		function active() {$menu.classList.toggle('active')};
+		var $burguerButton = document.getElementById('button');
+		var $menu = document.getElementById('menu');
+
+		function mediaQuery() {
+			if(consulta.matches){
+				console.log("funciona");
+				$burguerButton.addEventListener('touchstart',active);
+			} else{
+				console.log("no :(");
+				$burguerButton.removeEventListener('touchstart',active);
+			}
+		}
+		mediaQuery()
+		var bLazy = new Blazy({
+			selector: "img"
+		});
+		// function active() {$menu.classList.toggle('active')}
+		// $burguerButton.addEventListener('touchstart',active)
+	</script>
 </body>
 </html>
