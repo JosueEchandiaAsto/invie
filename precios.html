@@ -2,25 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Invie - Precios</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/invie.css">
 </head>
 <body>
-  <header id="header" class="header background"><!-- header -->
-    <div class="contenedor">
-      <figure class="logotipo"> <!-- logotipo -->
-        <img  src="images/invie.png" width="186" height="60" alt="Invie Logotipo"/>
-      </figure>
-      <nav class="menu"> <!-- menu -->
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#guitarras">Guitarras</a></li>
-          <li><a href="precios.html">Precios</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <section id="portada" class="portada head background">	<!-- Portada -->
+		<header id="header" class="header contenedor"><!-- header -->
+			<figure class="logotipo"> <!-- logotipo -->
+				<img  src="images/invie.png" srcset="images/invie.png 1x, images/invie2x.png 2x" width="186" height="60" alt="Invie Logotipo"/>
+			</figure>
+			<span id="button" class="burguer-button icon-menu"></span>
+			<nav id="menu" class="menu"> <!-- menu -->
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="./Desafios/index.html">Desafios</a></li>
+					<li><a href="precios.html">Precios</a></li>
+				</ul>
+			</nav>
+		</header>
+	</section>
   <section class="tabla">
     <div class="contenedor">
       <table>
@@ -95,6 +97,37 @@
 			</form>
 		</div>
 	</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js" charset="utf-8"></script>
+	<script src="http://hammerjs.github.io/dist/hammer.js" charset="utf-8"></script>
+	<script type="text/javascript">
+		var consulta = window.matchMedia('(max-width: 500px)');
+		consulta.addListener(mediaQuery);
 
+		function active() {$menu.classList.toggle('active')};
+		function show() {$menu.classList.add('active')};
+		function hide() {$menu.classList.remove('active')};
+		var $burguerButton = document.getElementById('button');
+		var $menu = document.getElementById('menu');
+
+		function mediaQuery() {
+			if(consulta.matches){
+				console.log("funciona");
+				$burguerButton.addEventListener('touchstart',active);
+			} else{
+				console.log("no :(");
+				$burguerButton.removeEventListener('touchstart',active);
+			}
+		}
+		mediaQuery()
+		var bLazy = new Blazy({
+			selector: "img"
+		});
+		var $body = document.body;
+		var gestos = new Hammer($body)
+		gestos.on('swipeleft', hide)
+		gestos.on('swiperight', show);
+		// function active() {$menu.classList.toggle('active')}
+		// $burguerButton.addEventListener('touchstart',active)
+	</script>
 </body>
 </html>
