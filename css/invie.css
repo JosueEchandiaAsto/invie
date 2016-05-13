@@ -387,8 +387,12 @@ input:focus, textarea:focus{
     border-bottom: 1px solid white;
   }
   input[type="text"],input[type="email"]{
-    font-size: 16px;
+    font-size: 20px;
     padding: 5px;
+    margin-bottom: 20px;
+  }
+  .intereses label,.genero label{
+    display: block;
   }
   .menu li:first-child{
     border-top: 1px solid white;
