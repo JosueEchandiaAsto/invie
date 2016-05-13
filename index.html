@@ -4,6 +4,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Invie - tus mejores guitarras!!</title>
+	<style media="screen">
+		@font-face{font-family:'icomoon';src:url(./fonts/icomoon.eot?4r3ej0);src:url(./fonts/icomoon.eot?4r3ej0#iefix) format("embedded-opentype"),url(./fonts/icomoon.ttf?4r3ej0) format("truetype"),url(./fonts/icomoon.woff?4r3ej0) format("woff"),url(./fonts/icomoon.svg?4r3ej0#icomoon) format("svg");font-weight:400;font-style:normal}[class*=" icon-"]{font-family:'icomoon'!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-menu:before{content:"\e901"}body{font-family:'Allerta',sans-serif;margin:0}.titulo{font-size:70px;font-family:'Montserrat',sans-serif;margin-bottom:0;margin-top:70px}.contenedor{max-width:800px;margin:auto;width:auto}.background{background-image:url(../images/background.png);background-size:cover;background-color:#2A4150}.titulo span{text-decoration:underline}.title-a{font-size:24px;margin-top:0}.guitarras{color:#1F313C;margin-bottom:60px}.guitarras h2{font-size:35px;font-family:'Montserrat',sans-serif}.portada{height:500px;color:#fff;padding:20px}.menu{font-size:24px;display:inline-block;position:absolute;right:1em}.menu li{display:inline-block;margin-left:30px}.menu li:after,.menu li:before{content:"°";color:#fff;font-size:40px}.menu li:after{margin-left:2px}.menu li:before{margin-right:2px}.menu ul{padding:0}.menu a{color:#fff;text-decoration:none;vertical-align:top}.logotipo{display:inline-block;margin:0;margin-bottom:2em}.boton{border-radius:12px;background-color:#FD324E;color:#fff;font-size:18px;border-style:none;padding:7px 12px;outline:none;text-decoration:none;background:linear-gradient(to left,#FE344E,#FF7250)}.derecha{position:relative;top:-128px;float:right}.header{position:relative}.burguer-button{display:none;z-index:3;position:fixed;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#395667;text-align:center;left:20px;top:20px}.video-demo{max-width:500px;margin:0 auto;margin-bottom:70px;border:5px solid #3c5b6e}@media screen and (max-width: 800px){.titulo{font-size:45px;margin-top:30px}.video-demo{margin-bottom:20px}.title-a{font-size:18px}.boton{margin-bottom:20px;display:inline-block}.portada{height:auto}.guitarras{text-align:center}.derecha{float:none;position:static}}@media screen and (max-width: 700px){.portada{text-align:center}.menu{position:static;display:block}.menu li:first-child{margin:0}.menu ul{padding:0}}@media screen and (max-width: 500px){.menu{background:rgba(255,60,88,0.8);position:fixed;width:100%;left:-100%;top:0;z-index:1;bottom:0;right:0;display:flex;align-items:center}.burguer-button{display:inline-block}.menu ul{flex:1}.portada .contenedor{position:static}.portada .boton{display:block}.menu li{padding:10px 0;display:block;margin:0;border-bottom:1px solid #fff}.menu li:first-child{border-top:1px solid #fff}.menu li:before,.menu li:after{display:none}.logotipo{margin:0}.titulo{font-size:30px}.title-a{font-size:16px}.boton{margin-bottom:0}.guitarra img{width:250px}.video-demo{margin:0 10px}}.videocontainer{position:relative;padding-top:56.25%}.video-src{position:absolute;left:0;right:0;top:0;bottom:0;width:100%;height:100%}@media screen and (-webkit-min-device-pixel-ratio: 2){.background{background-image:url(../images/background2x.png)}}
+	</style>
 </head>
 <body>
 	<section id="portada" class="portada background">	<!-- Portada -->
@@ -99,8 +102,6 @@
 			</form>
 		</div>
 	</footer>
-	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Allerta' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/invie.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/blazy/1.6.2/blazy.min.js" charset="utf-8"></script>
 	<script src="http://hammerjs.github.io/dist/hammer.js" charset="utf-8"></script>
 	<script type="text/javascript">
@@ -132,6 +133,18 @@
 		gestos.on('swiperight', show);
 		// function active() {$menu.classList.toggle('active')}
 		// $burguerButton.addEventListener('touchstart',active)
+		WebFontConfig = {
+	    google: { families: [ 'Montserrat:400,700:latin', 'Allerta::latin' ] }
+	  };
+	  (function() {
+	    var wf = document.createElement('script');
+	    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+	    wf.type = 'text/javascript';
+	    wf.async = 'true';
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(wf, s);
+	  })();
 	</script>
+	<link rel="stylesheet" href="css/invie.css">
 </body>
 </html>
